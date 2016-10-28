@@ -12,7 +12,7 @@ RUN   echo debconf shared/accepted-oracle-license-v1-1 select try | debconf-set-
       echo debconf shared/accepted-oracle-license-v1-1 seen true | debconf-set-selections && \
       apt-get -y install curl oracle-java8-installer; apt-get clean
 
-ADD   ./scripts/start /start
+ADD   ./scripts/start.sh /start
 RUN   chmod +x /start
 
 EXPOSE 25565
